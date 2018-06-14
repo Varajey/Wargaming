@@ -1,0 +1,17 @@
+{
+    "name": "jumpgategaming/wargaming",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Travis Blasingame",
+            "email": "tpblasingame@gmail.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "~6.0",
+        "jenssegers/model": "~1.1",
+        "jumpgate/database": "dev-master",
+        "socialiteproviders/manager": "~2.0 || ~3.0"
+    },
+    "minimum-stability": "dev"
+}
