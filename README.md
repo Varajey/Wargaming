@@ -1,6 +1,6 @@
 # Installation
 
-`composer reuire jummpgategaming/wargaming`
+`composer require jummpgategaming/wargaming`
 
 # Set up
 
