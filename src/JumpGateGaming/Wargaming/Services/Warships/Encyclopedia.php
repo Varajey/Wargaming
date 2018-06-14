@@ -7,6 +7,7 @@ class Encyclopedia
     public function __call($name, $arguments)
     {
         $class = '\JumpGateGaming\Wargaming\Services\Warships\Encyclopedia\\' . ucfirst($name);
-        dd($class);
+
+        return call_user_func_array([new $class, 'handle'], $arguments);
     }
 }

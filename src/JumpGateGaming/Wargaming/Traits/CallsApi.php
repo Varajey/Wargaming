@@ -19,7 +19,7 @@ trait CallsApi
     protected function buildQuery($parameters)
     {
         $default = [
-            'application_id' => config('services.wargaming.api_key'),
+            'application_id' => config('services.wargaming.client_secret'),
         ];
 
         $parameters = array_merge($default, $parameters);

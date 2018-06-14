@@ -8,18 +8,15 @@ use JumpGateGaming\Wargaming\Services\Warships\Manager as WarshipsManager;
 
 class Client
 {
-    protected $baseUrl = '';
+    public $client;
 
-    protected $client;
+    protected $baseUrl = '';
 
     protected $region;
 
     public function __construct()
     {
         $this->region = new Na;
-        $this->client = new GuzzleClient([
-            'base_uri' => $this->region->getUrl()
-        ]);
     }
 
     public function setRegion($region)
@@ -27,23 +24,40 @@ class Client
         $class = '\JumpGateGaming\Wargaming\Services\Client\Regions\\' . ucfirst($region);
         $this->region = new $class;
 
+        return $this;
+    }
+
+    protected function setClient($url)
+    {
+        $this->baseUrl = $url;
         $this->client = new GuzzleClient([
-            'base_uri' => $this->region->getUrl()
+            'base_uri' => $url,
         ]);
+
+        return $this;
     }
 
     public function tanks()
     {
+        $url = $this->region->getUrl('tank');
+        $this->setClient($url);
+
         return 'tanks';
     }
 
     public function warships()
     {
+        $url = $this->region->getUrl('warships');
+        $this->setClient($url);
+
         return new WarshipsManager;
     }
 
     public function warplanes()
     {
+        $url = $this->region->getUrl('warplanes');
+        $this->setClient($url);
+
         return 'warplanes';
     }
 }

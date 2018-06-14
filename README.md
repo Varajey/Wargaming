@@ -3,7 +3,7 @@
 `composer require jummpgategaming/wargaming`
 
 # Set up
-
+## API details
 Update your `config/services.php` to include `wargaming`.
 
 ```php
@@ -11,6 +11,17 @@ Update your `config/services.php` to include `wargaming`.
     'client_id'     => null,
     'client_secret' => env('WARGAMING_API_KEY'),
     'redirect'      => env('WARGAMING_REDIRECT_URI'),
+],
+```
+
+## Service provider
+You should add the provider to your `providers[]` array in `config/app.php`.
+
+```php
+'providers' => [
+    ...
+    JumpGateGaming\Wargaming\Providers\WargamingServiceProvider::class,
+    ...
 ],
 ```
 
