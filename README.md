@@ -30,7 +30,7 @@ added it already.
 1. Add your listeners (i.e. the ones from the providers) to the `SocialiteProviders\Manager\SocialiteWasCalled[]` that 
 you just created.
 1. The listener that you add for this provider is 
-`'Gaming\\Wargaming\\Providers\\Socialite\\WargamingExtendSocialite@handle',`.
+`'JumpGateGaming\\Wargaming\\Providers\\Socialite\\WargamingExtendSocialite@handle',`.
 
 Example:
 ```php
@@ -42,7 +42,7 @@ Example:
 protected $listen = [
     \SocialiteProviders\Manager\SocialiteWasCalled::class => [
         // add your listeners (aka providers) here
-        'SocialiteProviders\\Steam\\SteamExtendSocialite@handle',
+        'JumpGateGaming\\Wargaming\\Providers\\Socialite\\WargamingExtendSocialite@handle',
     ],
 ];
 ```

@@ -13,5 +13,10 @@
         "jumpgate/database": "dev-master",
         "socialiteproviders/manager": "~2.0 || ~3.0"
     },
+    "autoload": {
+        "psr-4": {
+            "JumpGateGaming\\Wargaming\\": "src/JumpGateGaming/Wargaming"
+        }
+    },
     "minimum-stability": "dev"
 }

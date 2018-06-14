@@ -1,6 +1,6 @@
 <?php
 
-namespace Gaming\Wargaming\Providers\Socialite;
+namespace JumpGateGaming\Wargaming\Providers\Socialite;
 
 use SocialiteProviders\Manager\SocialiteWasCalled;
 
