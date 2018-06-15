@@ -21,6 +21,11 @@ class Warships extends Route
 
     protected $model = '\JumpGateGaming\Wargaming\Models\Warships\Ship';
 
+    /**
+     * @param array $arguments
+     *
+     * @return \JumpGateGaming\Wargaming\Models\Response\Error|\JumpGateGaming\Wargaming\Models\Response\Success
+     */
     public function handle($arguments = [])
     {
         $ships = $this->get($this->getRoute(), $arguments);
