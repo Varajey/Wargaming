@@ -1,6 +1,6 @@
 <?php
 
-namespace JumpGateGaming\Wargaming\Services\Warships\Encyclopedia;
+namespace JumpGateGaming\Wargaming\Services\Warplanes\Encyclopedia;
 
 use JumpGateGaming\Wargaming\Models\Response\Error;
 use JumpGateGaming\Wargaming\Models\Response\Success;
@@ -8,7 +8,7 @@ use JumpGateGaming\Wargaming\Services\Route;
 use JumpGateGaming\Wargaming\Traits\CallsApi;
 use JumpGateGaming\Wargaming\Traits\ConvertsToModels;
 
-class Warships extends Route
+class Warplanes extends Route
 {
     /**
      * This class makes API calls to wargaming.
@@ -17,9 +17,9 @@ class Warships extends Route
 
     use ConvertsToModels;
 
-    protected $route = 'encyclopedia/ships/';
+    protected $route = 'encyclopedia/planes/';
 
-    protected $model = '\JumpGateGaming\Wargaming\Models\Warships\Ship';
+    protected $model = '\JumpGateGaming\Wargaming\Models\Warplanes\Plane';
 
     /**
      * @param array $arguments
@@ -29,14 +29,14 @@ class Warships extends Route
      */
     public function handle($arguments = [])
     {
-        $ships = $this->get($this->getRoute(), $arguments);
+        $planes = $this->get($this->getRoute(), $arguments);
 
-        if ($ships->status === 'error') {
-            return new Error($ships);
+        if ($planes->status === 'error') {
+            return new Error($planes);
         }
 
-        $ships->data = $this->convertToModels($ships->data);
+        $planes->data = $this->convertToModels($planes->data);
 
-        return new Success($ships);
+        return new Success($planes);
     }
 }

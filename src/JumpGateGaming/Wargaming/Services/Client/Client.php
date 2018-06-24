@@ -4,6 +4,8 @@ namespace JumpGateGaming\Wargaming\Services\Client;
 
 use GuzzleHttp\Client as GuzzleClient;
 use JumpGateGaming\Wargaming\Services\Client\Regions\Na;
+use JumpGateGaming\Wargaming\Services\Tanks\Manager as TankManager;
+use JumpGateGaming\Wargaming\Services\Warplanes\Manager as WarplanesManager;
 use JumpGateGaming\Wargaming\Services\Warships\Manager as WarshipsManager;
 
 class Client
@@ -42,7 +44,7 @@ class Client
         $url = $this->region->getUrl('tank');
         $this->setClient($url);
 
-        return 'tanks';
+        return new TankManager;
     }
 
     public function warships()
@@ -58,6 +60,6 @@ class Client
         $url = $this->region->getUrl('warplanes');
         $this->setClient($url);
 
-        return 'warplanes';
+        return new WarplanesManager;
     }
 }
