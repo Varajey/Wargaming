@@ -1,3 +1,13 @@
+- [Installation](#installation)
+- [Set up](#set-up)
+    - [API Details](#api-details)
+    - [Service Provider](#service-provider)
+- [Authentication](#authentication)
+- [Available Methods](#available-methods)
+    - [World of Tanks](#world-of-tanks)
+    - [World of Warships](#world-of-warships)
+    - [World of Warplanes](#world-of-warplanes)
+
 # Installation
 
 `composer require jummpgategaming/wargaming`
@@ -59,3 +69,31 @@ protected $listen = [
 ```
 
 Now to use it you would just call `return Socialite::with('wargaming')->redirect();`.
+
+# Available methods
+To call anything at all you will need to begin with calling `app('wargaming')`.  This is the entry point for everything 
+else.  From there you call to the API you want to interact with.  That would be one of `tanks()`, `warships()` or 
+`warplanes()`.  Next you call the overall section you want then the method.
+
+Here's an example call:
+```php
+$wargaming = app('wargaming');
+$tanks = $wargaming->tanks()->encyclopedia()->tanks();
+```
+
+> The below lists represent all working methods.  Anything not listed here has not been added yet.
+
+## World of Tanks
+Group | Method | API Reference
+----- | ------ | --------------
+encyclopedia | tanks | [List of Vehicles](https://developers.wargaming.net/reference/all/wot/encyclopedia/tanks/)
+
+## World of Warships
+Group | Method | API Reference
+----- | ------ | --------------
+encyclopedia | warships | [List of Ships](https://developers.wargaming.net/reference/all/wows/encyclopedia/ships)
+
+## World of Warplanes
+Group | Method | API Reference
+----- | ------ | --------------
+encyclopedia | warplanes | [List of Aircraft](https://developers.wargaming.net/reference/all/wowp/encyclopedia/planes)
