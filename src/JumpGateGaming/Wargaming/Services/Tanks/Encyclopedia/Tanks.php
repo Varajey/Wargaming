@@ -17,7 +17,7 @@ class Tanks extends Route
 
     use ConvertsToModels;
 
-    protected $route = 'encyclopedia/tanks/';
+    protected $route = 'encyclopedia/vehicles/';
 
     protected $model = '\JumpGateGaming\Wargaming\Models\Tanks\Tank';
 
