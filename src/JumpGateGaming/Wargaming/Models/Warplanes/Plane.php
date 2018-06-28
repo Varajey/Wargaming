@@ -10,33 +10,34 @@ use JumpGateGaming\Wargaming\Models\General\Images;
  *
  * @package JumpGateGaming\Wargaming
  *
- * @property Images  $images
- * @property string  $nation_il8n
+ * @property boolean $is_gift
+ * @property string  $nation_i18n
  * @property string  $name
  * @property int     $level
  * @property string  $nation
  * @property boolean $is_premium
- * @property boolean $is_gift
- * @property string  $name_il8n
- * @property string  $type
  * @property int     $plane_id
+ * @property string  $name_i18n
+ * @property string  $type
  * @property int     $tier
+ *
+ * @property Images  $images
  */
 class Plane extends Base
 {
-    public function __construct($attributes = [])
-    {
-        $attributes         = (array)$attributes;
-        $attributes['tier'] = $attributes['level'];
-
-        parent::__construct($attributes);
-    }
-
     /**
      * @param $value
      */
     public function setImagesAttribute($value)
     {
         $this->attributes['images'] = new Images($value);
+    }
+
+    /**
+     * @return int
+     */
+    public function getTierAttribute()
+    {
+        return $this->level;
     }
 }

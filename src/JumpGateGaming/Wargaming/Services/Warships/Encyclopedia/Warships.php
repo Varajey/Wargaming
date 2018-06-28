@@ -20,23 +20,4 @@ class Warships extends Route
     protected $route = 'encyclopedia/ships/';
 
     protected $model = '\JumpGateGaming\Wargaming\Models\Warships\Ship';
-
-    /**
-     * @param array $arguments
-     *
-     * @return \JumpGateGaming\Wargaming\Models\Response\Error|\JumpGateGaming\Wargaming\Models\Response\Success
-     * @throws \Exception
-     */
-    public function handle($arguments = [])
-    {
-        $ships = $this->get($this->getRoute(), $arguments);
-
-        if ($ships->status === 'error') {
-            return new Error($ships);
-        }
-
-        $ships->data = $this->convertToModels($ships->data);
-
-        return new Success($ships);
-    }
 }
