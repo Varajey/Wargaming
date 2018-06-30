@@ -78,7 +78,7 @@ else.  From there you call to the API you want to interact with.  That would be 
 Here's an example call:
 ```php
 $wargaming = app('wargaming');
-$tanks = $wargaming->tanks()->encyclopedia()->tanks();
+$tanks = $wargaming->tanks()->encyclopedia()->vehicles();
 ```
 
 > The below lists represent all working methods.  Anything not listed here has not been added yet.
@@ -86,14 +86,16 @@ $tanks = $wargaming->tanks()->encyclopedia()->tanks();
 ## World of Tanks
 Group | Method | API Reference
 ----- | ------ | --------------
-encyclopedia | tanks | [List of Vehicles](https://developers.wargaming.net/reference/all/wot/encyclopedia/tanks/)
+encyclopedia | vehicles | [List of Vehicles](https://developers.wargaming.net/reference/all/wot/encyclopedia/vehicles/)
+&nbsp; | modules | [List of Modules](https://developers.wargaming.net/reference/all/wot/encyclopedia/modules/)
 
 ## World of Warships
 Group | Method | API Reference
 ----- | ------ | --------------
-encyclopedia | warships | [List of Ships](https://developers.wargaming.net/reference/all/wows/encyclopedia/ships)
+encyclopedia | ships | [List of Ships](https://developers.wargaming.net/reference/all/wows/encyclopedia/ships)
+ships | stats | [Player Ship Statistics](https://developers.wargaming.net/reference/all/wows/ships/stats/)
 
 ## World of Warplanes
 Group | Method | API Reference
 ----- | ------ | --------------
-encyclopedia | warplanes | [List of Aircraft](https://developers.wargaming.net/reference/all/wowp/encyclopedia/planes)
+encyclopedia | planes | [List of Aircraft](https://developers.wargaming.net/reference/all/wowp/encyclopedia/planes)
