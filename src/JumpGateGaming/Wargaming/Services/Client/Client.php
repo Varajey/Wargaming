@@ -34,7 +34,7 @@ class Client
      */
     public function __construct()
     {
-        $this->region = new Na;
+        $this->setRegion(config('gaming.wargaming.region'));
     }
 
     /**

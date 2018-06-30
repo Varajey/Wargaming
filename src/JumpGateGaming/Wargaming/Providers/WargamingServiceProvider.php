@@ -38,7 +38,6 @@ class WargamingServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->loadConfigs();
-        $this->loadCommands();
     }
 
     /**
@@ -51,12 +50,5 @@ class WargamingServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__ . '/../../../config/wargaming.php' => config_path('gaming/wargaming.php'),
         ]);
-    }
-
-    private function loadCommands()
-    {
-        if ($this->app->runningInConsole()) {
-            $this->commands([]);
-        }
     }
 }

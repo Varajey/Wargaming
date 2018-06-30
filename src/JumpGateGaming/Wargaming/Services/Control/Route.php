@@ -42,6 +42,8 @@ class Route
     }
 
     /**
+     * Make a call to the API.  Convert the results to models.
+     *
      * @param array $arguments
      *
      * @return \JumpGateGaming\Wargaming\Models\Response\Error|\JumpGateGaming\Wargaming\Models\Response\Success
@@ -49,7 +51,8 @@ class Route
      */
     public function send($arguments = [])
     {
-        $objects = $this->get($this->getRoute(), $arguments);
+        $verb = $this->getVerb();
+        $objects = $this->{$verb}($this->getRoute(), $arguments);
 
         if ($objects->status === 'error') {
             return new Error($objects);
@@ -63,7 +66,7 @@ class Route
     /**
      * Make sure a route is set.
      *
-     * @return mixed
+     * @return string
      * @throws \Exception
      */
     protected function getRoute()
@@ -78,7 +81,7 @@ class Route
     /**
      * Make sure a model is set.
      *
-     * @return mixed
+     * @return string
      * @throws \Exception
      */
     protected function getModel()
@@ -88,5 +91,20 @@ class Route
         }
 
         return $this->config->model;
+    }
+
+    /**
+     * Make sure a verb is set.
+     *
+     * @return string
+     * @throws \Exception
+     */
+    protected function getVerb()
+    {
+        if (!isset($this->config->verb)) {
+            throw new \Exception('You are missing the verb property in your reference file.');
+        }
+
+        return $this->config->verb;
     }
 }

@@ -19,27 +19,25 @@ use JumpGateGaming\Wargaming\Models\General\Upgrades;
  * @property int         $price_gold
  * @property string      $ship_id_str
  * @property bool        $has_demo_profile
- * @property Images      $images
- * @property Modules     $modules
- * @property ModuleTree  $modules_tree
  * @property string      $nation
  * @property bool        $is_premium
  * @property int         $ship_id
  * @property int         $price_credit
- * @property Profile     $default_profile
- * @property Upgrades    $upgrades
  * @property int         $tier
- * @property NextVehicle $next_ships
  * @property int         $mod_slots
  * @property string      $type
  * @property bool        $is_special
  * @property string      $name
+ *
+ * @property Images      $images
+ * @property Modules     $modules
+ * @property ModuleTree  $modules_tree
+ * @property Profile     $default_profile
+ * @property Upgrades    $upgrades
+ * @property NextVehicle $next_ships
  */
 class Ship extends Base
 {
-    /**
-     * @param $value
-     */
     public function setImagesAttribute($value)
     {
         $this->attributes['images'] = new Images($value);

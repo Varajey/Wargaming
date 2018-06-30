@@ -1,4 +1,5 @@
 {
     "route": "encyclopedia/vehicles/",
+    "verb": "get",
     "model": "\\JumpGateGaming\\Wargaming\\Models\\Tanks\\Tank"
 }

@@ -1,4 +1,5 @@
 {
     "route": "encyclopedia/modules/",
+    "verb": "get",
     "model": "\\JumpGateGaming\\Wargaming\\Models\\General\\Engines"
 }

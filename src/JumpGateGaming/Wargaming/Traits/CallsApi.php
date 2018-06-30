@@ -35,6 +35,7 @@ trait CallsApi
     {
         $default = [
             'application_id' => config('services.wargaming.client_secret'),
+            'language'       => config('gaming.wargaming.language'),
         ];
 
         $parameters = array_merge($default, $parameters);

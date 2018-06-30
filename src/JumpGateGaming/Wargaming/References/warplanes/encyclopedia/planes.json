@@ -1,4 +1,5 @@
 {
     "route": "encyclopedia/planes/",
+    "verb": "get",
     "model": "\\JumpGateGaming\\Wargaming\\Models\\Warplanes\\Plane"
 }

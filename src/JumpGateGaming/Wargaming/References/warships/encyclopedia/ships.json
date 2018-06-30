@@ -1,4 +1,5 @@
 {
     "route": "encyclopedia/ships/",
+    "verb": "get",
     "model": "\\JumpGateGaming\\Wargaming\\Models\\Warships\\Ship"
 }
