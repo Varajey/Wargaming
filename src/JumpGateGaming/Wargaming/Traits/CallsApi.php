@@ -4,6 +4,14 @@ namespace JumpGateGaming\Wargaming\Traits;
 
 trait CallsApi
 {
+    /**
+     * Call a GET route on the API.
+     *
+     * @param string $route
+     * @param array  $parameters
+     *
+     * @return mixed
+     */
     public function get($route, $parameters)
     {
         $client = app('wargaming');
@@ -16,6 +24,13 @@ trait CallsApi
         );
     }
 
+    /**
+     * Ad the application_id to all calls.
+     *
+     * @param array $parameters
+     *
+     * @return string
+     */
     protected function buildQuery($parameters)
     {
         $default = [

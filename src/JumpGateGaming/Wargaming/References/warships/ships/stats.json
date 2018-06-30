@@ -1,0 +1,4 @@
+{
+    "route": "ships/stats/",
+    "model": "\\JumpGateGaming\\Wargaming\\Models\\Warships\\PlayerShip"
+}
