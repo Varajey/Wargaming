@@ -2,6 +2,7 @@
 
 namespace JumpGateGaming\Wargaming\Providers\Socialite;
 
+use Illuminate\Support\Arr;
 use Laravel\Socialite\Two\ProviderInterface;
 use SocialiteProviders\Manager\OAuth2\AbstractProvider;
 use SocialiteProviders\Manager\OAuth2\User;
@@ -100,11 +101,11 @@ class Provider extends AbstractProvider implements ProviderInterface
     protected function mapUserToObject(array $user)
     {
         return (new User())->setRaw($user)->map([
-            'id'       => $user['account_id'],
-            'nickname' => $user['nickname'],
-            'name'     => $user['nickname'],
-            'email'    => null,
-            'avatar'   => null,
+            'id'         => $user['account_id'],
+            'nickname'   => $user['nickname'],
+            'name'       => $user['nickname'],
+            'email'      => null,
+            'avatar'     => null,
         ]);
     }
 
@@ -116,5 +117,17 @@ class Provider extends AbstractProvider implements ProviderInterface
         return array_merge(parent::getTokenFields($code), [
             'grant_type' => 'authorization_code',
         ]);
+    }
+
+    /**
+     * Get the expires at from the token response body.
+     *
+     * @param string $body
+     *
+     * @return string
+     */
+    protected function parseExpiresIn($body)
+    {
+        return Arr::get($body, 'expires_at');
     }
 }
