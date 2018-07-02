@@ -1,7 +1,7 @@
 {
     "route": "ships/stats/",
     "verb": "get",
-    "model": "\\JumpGateGaming\\Wargaming\\Models\\Warships\\PlayerShip",
+    "model": "\\JumpGateGaming\\Wargaming\\Collections\\Warships\\Ships\\Stats",
     "model_type": "collection",
     "required_arguments": [
          "account_id"

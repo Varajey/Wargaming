@@ -46,13 +46,6 @@ class Route
             return new Error($objects);
         }
 
-        // When you specify an account ID, it becomes the property
-        // containing the data.
-        if (isset($arguments['account_id'])) {
-            $accountId     = $arguments['account_id'];
-            $objects->data = $objects->data->{$accountId};
-        }
-
         $objects->data = $this->convertToModels($objects->data);
 
         return new Success($objects);

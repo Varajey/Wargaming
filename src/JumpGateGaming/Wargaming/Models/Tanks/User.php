@@ -4,6 +4,7 @@ namespace JumpGateGaming\Wargaming\Models\Tanks;
 
 use JumpGateGaming\Wargaming\Models\Base;
 use JumpGateGaming\Wargaming\Models\Tanks\User\PrivateUser;
+use JumpGateGaming\Wargaming\Models\Tanks\User\Stats;
 
 /**
  * Class User

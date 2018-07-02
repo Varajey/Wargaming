@@ -2,7 +2,7 @@
     "route": "account/info/",
     "verb": "get",
     "model": "\\JumpGateGaming\\Wargaming\\Models\\Tanks\\User",
-    "model_type": "single",
+    "model_type": "collection",
     "required_arguments": [
         "account_id"
     ],

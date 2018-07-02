@@ -5,64 +5,70 @@ namespace JumpGateGaming\Wargaming\Models\Tanks\Battles;
 use JumpGateGaming\Wargaming\Models\Base;
 
 /**
- * Class Pvp
+ * Class Details
  *
  * @package JumpGateGaming\Wargaming\Models\Tanks\Pvp
  *
- * @property int   $art_agro
+ * @property int   $battle_avg_xp
  * @property int   $battles
+ * @property int   $battles_on_stunning_vehicles
  * @property int   $capture_points
  * @property int   $damage_dealt
- * @property int   $damage_scouting
+ * @property int   $damage_received
+ * @property int   $direct_hits_received
  * @property int   $draws
  * @property int   $dropped_capture_points
+ * @property int   $explosion_hits
+ * @property int   $explosion_hits_received
  * @property int   $frags
+ * @property int   $hits
+ * @property int   $hits_percents
  * @property int   $losses
- * @property int   $max_damage_dealt
- * @property int   $max_damage_scouting
- * @property int   $max_frags_battle
- * @property int   $max_planes_killed
- * @property int   $max_ships_spotted
- * @property int   $max_total_agro
- * @property int   $max_xp
- * @property int   $planes_killed
- * @property int   $ships_spotted
+ * @property int   $no_damage_direct_hits_received
+ * @property int   $piercings
+ * @property int   $piercings_received
+ * @property int   $shots
+ * @property int   $spotted
+ * @property int   $stun_assisted_damage
+ * @property int   $stun_number
  * @property int   $survived_battles
- * @property int   $survived_wins
- * @property int   $team_capture_points
- * @property int   $team_dropped_capture_points
- * @property int   $torpedo_agro
+ * @property float $tanking_factor
  * @property int   $wins
  * @property int   $xp
  *
- * @property Stats $main_battery
- * @property Stats $second_battery
- * @property Stats $ramming
- * @property Stats $torpedoes
- * @property Stats $aircraft
+ ***************************************************
+ * For everything except Stronghold
+ ***************************************************
+ * @property float $avg_damage_assisted
+ * @property float $avg_damage_assisted_radio
+ * @property float $avg_damage_assisted_track
+ * @property float $avg_damage_blocked
  *
  ***************************************************
- * For Operation Mode (normal, hard and solo) only
+ * For All, Epic, Fallout, Historical, Ranked Battles,
+ * Team and Stronghold statistics only
  ***************************************************
- * @property array $wins_by_tasks
+ * @property int   $max_damage
+ * @property int   $max_damage_tank_id
+ * @property int   $max_frags
+ * @property int   $max_frags_tank_id
+ * @property int   $max_xp
+ * @property int   $max_xp_tank_id
  *
  ***************************************************
- * For PvP only
+ * For Fallout statistics only
  ***************************************************
- * @property int   $battles_since_510
- * @property int   $battles_since_512
- * @property int   $damage_to_buildings
- * @property int   $max_damage_dealt_to_buildings
- * @property int   $max_suppressions_count
- * @property int   $suppressions_count
+ * @property int   $avatar_damage_dealt
+ * @property int   $avatar_frags
+ * @property int   $death_count
+ * @property int   $flag_capture
+ * @property int   $flag_capture_solo
+ * @property int   $max_frags_with_avatar
+ * @property int   $max_win_points
+ * @property int   $resource_absorbed
+ * @property int   $win_points
  */
 class Details extends Base
 {
-    protected $conversions = [
-        'main_battery'   => '\JumpGateGaming\Wargaming\Models\Tanks\Battles\Stats',
-        'second_battery' => '\JumpGateGaming\Wargaming\Models\Tanks\Battles\Stats',
-        'ramming'        => '\JumpGateGaming\Wargaming\Models\Tanks\Battles\Stats',
-        'torpedoes'      => '\JumpGateGaming\Wargaming\Models\Tanks\Battles\Stats',
-        'aircraft'       => '\JumpGateGaming\Wargaming\Models\Tanks\Battles\Stats',
-    ];
+    //
 }
