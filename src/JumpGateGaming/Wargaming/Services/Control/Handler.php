@@ -2,6 +2,8 @@
 
 namespace JumpGateGaming\Wargaming\Services\Control;
 
+use JumpGateGaming\Wargaming\Models\General\Config;
+
 class Handler
 {
     /**
@@ -79,6 +81,40 @@ class Handler
      */
     public function __call($name, $arguments)
     {
+        // Get the config details for the route.
+        $config = $this->parseConfig($name);
+
+        // Convert the magic arguments to a usable array/
+        if (! empty($arguments)) {
+            $arguments = head($arguments);
+        }
+
+        return Route::loadConfig($config)
+            ->send($arguments);
+    }
+
+    /**
+     * Get the config for a route.  This could be useful for seeing
+     * what options the API gives you.
+     *
+     * @param string $name
+     *
+     * @return \JumpGateGaming\Wargaming\Models\General\Config
+     */
+    public function getConfig($name)
+    {
+        return $this->parseConfig($name);
+    }
+
+    /**
+     * Parse the config for a route.
+     *
+     * @param string $name
+     *
+     * @return \JumpGateGaming\Wargaming\Models\General\Config
+     */
+    protected function parseConfig($name)
+    {
         $parts = [
             __DIR__,
             '..',
@@ -89,18 +125,11 @@ class Handler
             $name,
         ];
 
-        // Get the config details for the route.
-        $config = implode('/', $parts) .'.json';
+        $config = implode('/', $parts) . '.json';
         $config = json_decode(
             file_get_contents($config)
         );
 
-        // Convert the magic arguments to a usable array/
-        if (! empty($arguments)) {
-            $arguments = head($arguments);
-        }
-
-        return Route::loadConfig($config)
-            ->send($arguments);
+        return new Config($config);
     }
 }

@@ -1,0 +1,31 @@
+{
+    "route": "account/info/",
+    "verb": "get",
+    "model": "\\JumpGateGaming\\Wargaming\\Models\\Tanks\\User",
+    "model_type": "single",
+    "required_arguments": [
+        "account_id"
+    ],
+    "optional_arguments": [
+        "access_token",
+        "extra",
+        "fields",
+        "language"
+    ],
+    "extras": [
+        "private.boosters",
+        "private.grouped_contacts",
+        "private.personal_missions",
+        "private.garage",
+        "private.rented",
+        "statistics.epic",
+        "statistics.fallout",
+        "statistics.globalmap_absolute",
+        "statistics.globalmap_champion",
+        "statistics.globalmap_middle",
+        "statistics.random",
+        "statistics.random_battles",
+        "statistics.random_battles_current",
+        "statistics.random_battles_previous"
+    ]
+}

@@ -1,5 +1,20 @@
 {
     "route": "encyclopedia/modules/",
     "verb": "get",
-    "model": "\\JumpGateGaming\\Wargaming\\Models\\General\\Engines"
+    "model": "\\JumpGateGaming\\Wargaming\\Models\\General\\Engines",
+    "model_type": "collection",
+    "required_arguments": [],
+    "optional_arguments": [
+        "extra",
+        "fields",
+        "language",
+        "limit",
+        "module_id",
+        "nation",
+        "page_no",
+        "type"
+    ],
+    "extras": [
+        "default_profile"
+    ]
 }

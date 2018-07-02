@@ -1,5 +1,18 @@
 {
     "route": "encyclopedia/vehicles/",
     "verb": "get",
-    "model": "\\JumpGateGaming\\Wargaming\\Models\\Tanks\\Tank"
+    "model": "\\JumpGateGaming\\Wargaming\\Models\\Tanks\\Tank",
+    "model_type": "collection",
+    "required_arguments": [],
+    "optional_arguments": [
+        "fields",
+        "language",
+        "limit",
+        "nation",
+        "page_no",
+        "tank_id",
+        "tier",
+        "type"
+    ],
+    "extras": []
 }

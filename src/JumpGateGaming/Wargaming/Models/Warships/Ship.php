@@ -38,33 +38,12 @@ use JumpGateGaming\Wargaming\Models\General\Upgrades;
  */
 class Ship extends Base
 {
-    public function setImagesAttribute($value)
-    {
-        $this->attributes['images'] = new Images($value);
-    }
-
-    public function setModulesAttribute($value)
-    {
-        $this->attributes['modules'] = new Modules($value);
-    }
-
-    public function setModulesTreeAttribute($value)
-    {
-        $this->attributes['modules_tree'] = new ModuleTree($value);
-    }
-
-    public function setDefaultProfileAttribute($value)
-    {
-        $this->attributes['default_profile'] = new Profile($value);
-    }
-
-    public function setUpgradesAttribute($value)
-    {
-        $this->attributes['upgrades'] = new Upgrades($value);
-    }
-
-    public function setNextShipsAttribute($value)
-    {
-        $this->attributes['next_ships'] = new NextVehicle($value);
-    }
+    protected $conversions = [
+        'images'          => '\JumpGateGaming\Wargaming\Models\General\Images',
+        'modules'         => '\JumpGateGaming\Wargaming\Models\General\Modules',
+        'modules_tree'    => '\JumpGateGaming\Wargaming\Models\General\ModuleTree',
+        'default_profile' => '\JumpGateGaming\Wargaming\Models\General\Profile',
+        'upgrades'        => '\JumpGateGaming\Wargaming\Models\General\Upgrades',
+        'next_ships'      => '\JumpGateGaming\Wargaming\Models\General\NextVehicle',
+    ];
 }

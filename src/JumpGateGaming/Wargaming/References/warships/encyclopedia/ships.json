@@ -1,5 +1,17 @@
 {
     "route": "encyclopedia/ships/",
     "verb": "get",
-    "model": "\\JumpGateGaming\\Wargaming\\Models\\Warships\\Ship"
+    "model": "\\JumpGateGaming\\Wargaming\\Models\\Warships\\Ship",
+    "model_type": "collection",
+    "required_arguments": [],
+    "optional_arguments": [
+        "fields",
+        "language",
+        "limit",
+        "nation",
+        "page_no",
+        "ship_id",
+        "type"
+    ],
+    "extras": []
 }

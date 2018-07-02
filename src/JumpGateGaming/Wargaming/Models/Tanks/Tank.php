@@ -49,91 +49,17 @@ use JumpGateGaming\Wargaming\Models\General\Turrets;
  */
 class Tank extends Base
 {
-    /**
-     * @param $value
-     */
-    public function setRadiosAttribute($value)
-    {
-        $this->attributes['radios'] = new Radios($value);
-    }
-
-    /**
-     * @param $value
-     */
-    public function setImagesAttribute($value)
-    {
-        $this->attributes['images'] = new Images($value);
-    }
-
-    /**
-     * @param $value
-     */
-    public function setSuspensionsAttribute($value)
-    {
-        $this->attributes['suspensions'] = new Suspensions($value);
-    }
-
-    /**
-     * @param $value
-     */
-    public function setProvisionsAttribute($value)
-    {
-        $this->attributes['provisions'] = new Provisions($value);
-    }
-
-    /**
-     * @param $value
-     */
-    public function setEnginesAttribute($value)
-    {
-        $this->attributes['engines'] = new Engines($value);
-    }
-
-    /**
-     * @param $value
-     */
-    public function setCrewAttribute($value)
-    {
-        $this->attributes['crew'] = new Crew($value);
-    }
-
-    /**
-     * @param $value
-     */
-    public function setGunsAttribute($value)
-    {
-        $this->attributes['guns'] = new Guns($value);
-    }
-
-    /**
-     * @param $value
-     */
-    public function setModulesTreeAttribute($value)
-    {
-        $this->attributes['modules_tree'] = new ModuleTree($value);
-    }
-
-    /**
-     * @param $value
-     */
-    public function setDefaultProfileAttribute($value)
-    {
-        $this->attributes['default_profile'] = new Profile($value);
-    }
-
-    /**
-     * @param $value
-     */
-    public function setNextTanksAttribute($value)
-    {
-        $this->attributes['next_tanks'] = new NextVehicle($value);
-    }
-
-    /**
-     * @param $value
-     */
-    public function setTurretsAttribute($value)
-    {
-        $this->attributes['turrets'] = new Turrets($value);
-    }
+    protected $conversions = [
+        'radios'          => '\JumpGateGaming\Wargaming\Models\General\Radios',
+        'images'          => '\JumpGateGaming\Wargaming\Models\General\Images',
+        'suspensions'     => '\JumpGateGaming\Wargaming\Models\General\Suspensions',
+        'provisions'      => '\JumpGateGaming\Wargaming\Models\General\Provisions',
+        'engines'         => '\JumpGateGaming\Wargaming\Models\General\Engines',
+        'crew'            => '\JumpGateGaming\Wargaming\Models\General\Crew',
+        'guns'            => '\JumpGateGaming\Wargaming\Models\General\Guns',
+        'modules_tree'    => '\JumpGateGaming\Wargaming\Models\General\ModuleTree',
+        'default_profile' => '\JumpGateGaming\Wargaming\Models\General\Profile',
+        'next_tanks'      => '\JumpGateGaming\Wargaming\Models\General\NextVehicle',
+        'turrets'         => '\JumpGateGaming\Wargaming\Models\General\Turrets',
+    ];
 }

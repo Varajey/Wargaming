@@ -25,13 +25,9 @@ use JumpGateGaming\Wargaming\Models\General\Images;
  */
 class Plane extends Base
 {
-    /**
-     * @param $value
-     */
-    public function setImagesAttribute($value)
-    {
-        $this->attributes['images'] = new Images($value);
-    }
+    protected $conversions = [
+        'images' => '\JumpGateGaming\Wargaming\Models\General\Images',
+    ];
 
     /**
      * @return int

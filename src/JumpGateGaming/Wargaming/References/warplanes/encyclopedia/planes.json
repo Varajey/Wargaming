@@ -1,5 +1,14 @@
 {
     "route": "encyclopedia/planes/",
     "verb": "get",
-    "model": "\\JumpGateGaming\\Wargaming\\Models\\Warplanes\\Plane"
+    "model": "\\JumpGateGaming\\Wargaming\\Models\\Warplanes\\Plane",
+    "model_type": "collection",
+    "required_arguments": [],
+    "optional_arguments": [
+        "fields",
+        "language",
+        "nation",
+        "type"
+    ],
+    "extras": []
 }

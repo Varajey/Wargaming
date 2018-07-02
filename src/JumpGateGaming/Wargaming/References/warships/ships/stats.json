@@ -2,7 +2,32 @@
     "route": "ships/stats/",
     "verb": "get",
     "model": "\\JumpGateGaming\\Wargaming\\Models\\Warships\\PlayerShip",
+    "model_type": "collection",
     "required_arguments": [
          "account_id"
+    ],
+    "optional_arguments": [
+        "access_token",
+        "extra",
+        "fields",
+        "in_garage",
+        "language",
+        "ship_id"
+    ],
+    "extras": [
+        "club",
+        "oper_div",
+        "oper_div_hard",
+        "oper_solo",
+        "pve",
+        "pve_div2",
+        "pve_div3",
+        "pve_solo",
+        "pvp_div2",
+        "pvp_div3",
+        "pvp_solo",
+        "rank_div2",
+        "rank_div3",
+        "rank_solo"
     ]
 }
