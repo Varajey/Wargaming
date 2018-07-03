@@ -1,0 +1,15 @@
+{
+    "route": "account/info2/",
+    "verb": "get",
+    "model": "\\JumpGateGaming\\Wargaming\\Models\\Warplanes\\User",
+    "model_type": "collection",
+    "required_arguments": [
+        "account_id"
+    ],
+    "optional_arguments": [
+        "access_token",
+        "fields",
+        "language"
+    ],
+    "extras": []
+}
