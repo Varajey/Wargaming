@@ -79,6 +79,6 @@ abstract class Base extends Model
         $conversions = $this->getConversions();
         $class = $conversions[$key];
 
-        return $this->attributes[$key] = new $class($value);
+        return new $class($value);
     }
 }
