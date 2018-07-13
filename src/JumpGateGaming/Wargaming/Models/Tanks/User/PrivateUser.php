@@ -32,6 +32,5 @@ class PrivateUser extends Base
         'grouped_contacts'  => '\JumpGateGaming\Wargaming\Models\Tanks\User\GroupedContacts',
         'personal_missions' => '\JumpGateGaming\Wargaming\Models\Tanks\User\Missions',
         'boosters'          => '\JumpGateGaming\Wargaming\Models\Tanks\User\Booster',
-        'rented'            => '\JumpGateGaming\Wargaming\Models\Tanks\User\Rentals',
     ];
 }
