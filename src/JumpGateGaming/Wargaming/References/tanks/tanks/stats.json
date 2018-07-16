@@ -1,0 +1,24 @@
+{
+    "route": "tanks/stats/",
+    "verb": "get",
+    "model": "\\JumpGateGaming\\Wargaming\\Collections\\Tanks\\Tanks\\Stats",
+    "model_type": "collection",
+    "required_arguments": [
+         "account_id"
+    ],
+    "optional_arguments": [
+        "access_token",
+        "extra",
+        "fields",
+        "in_garage",
+        "language",
+        "tank_id"
+    ],
+    "extras": [
+        "epic",
+        "fallout",
+        "random",
+        "ranked",
+        "ranked_battles"
+    ]
+}
