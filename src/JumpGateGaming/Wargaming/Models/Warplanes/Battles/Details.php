@@ -10,9 +10,12 @@ use JumpGateGaming\Wargaming\Models\Base;
  * @package JumpGateGaming\Wargaming\Models\Warplanes\Pvp
  *
  * @property float  $avg_battle_score
+ * @property float  $avg_flight_time
  * @property float  $avg_xp
- * @property int    $battle_Score
+ * @property int    $battle_score
  * @property int    $battles
+ * @property int    $chosen
+ * @property int    $chosen_first
  * @property int    $deaths
  * @property int    $draws
  * @property array  $eff_by_plane_type

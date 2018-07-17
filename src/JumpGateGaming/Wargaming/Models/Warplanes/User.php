@@ -4,6 +4,7 @@ namespace JumpGateGaming\Wargaming\Models\Warplanes;
 
 use JumpGateGaming\Wargaming\Models\Base;
 use JumpGateGaming\Wargaming\Models\Warplanes\User\PrivateUser;
+use JumpGateGaming\Wargaming\Models\Warplanes\User\Stats;
 
 /**
  * Class User

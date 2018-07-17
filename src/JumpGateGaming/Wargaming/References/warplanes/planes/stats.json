@@ -1,0 +1,16 @@
+{
+    "route": "planes/stats/",
+    "verb": "get",
+    "model": "\\JumpGateGaming\\Wargaming\\Collections\\Warplanes\\Planes\\Stats",
+    "model_type": "collection",
+    "required_arguments": [
+         "account_id"
+    ],
+    "optional_arguments": [
+        "access_token",
+        "fields",
+        "in_garage",
+        "language",
+        "plane_id"
+    ]
+}
