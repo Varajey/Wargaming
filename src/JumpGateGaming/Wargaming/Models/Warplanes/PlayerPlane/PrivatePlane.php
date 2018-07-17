@@ -2,7 +2,7 @@
 
 namespace JumpGateGaming\Wargaming\Models\Warplanes\PlayerPlane;
 
-use Jenssegers\Model\Model;
+use JumpGateGaming\Wargaming\Models\Base;
 
 /**
  * Class PrivatePlane
@@ -12,7 +12,7 @@ use Jenssegers\Model\Model;
  * @property bool      $in_garage
  * @property timestamp $in_garage_updated_at
  */
-class PrivatePlane extends Model
+class PrivatePlane extends Base
 {
     //
 }
