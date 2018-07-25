@@ -9,4 +9,6 @@ class Na extends Base
     const WARSHIPS_URL = 'https://api.worldofwarships.com/wows/';
 
     const WARPLANES_URL = 'https://api.worldofwarplanes.com/wowp/';
+
+    const WARGAMING_URL = 'https://api.worldoftanks.com/wgn/';
 }

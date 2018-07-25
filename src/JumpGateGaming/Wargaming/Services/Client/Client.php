@@ -86,6 +86,17 @@ class Client
     }
 
     /**
+     * Make calls to the wargaming.net API.
+     *
+     * @return \JumpGateGaming\Wargaming\Services\Control\Manager
+     * @throws \Exception
+     */
+    public function wargaming()
+    {
+        return $this->runManager('wargaming');
+    }
+
+    /**
      * Set up the manager that will handle calls for the specific APIs.
      *
      * @param string $game

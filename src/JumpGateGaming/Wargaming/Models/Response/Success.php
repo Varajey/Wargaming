@@ -29,7 +29,7 @@ class Success
     public function __construct($responseObject)
     {
         $this->status = $responseObject->status;
-        $this->meta   = $responseObject->meta;
+        $this->meta   = $responseObject->meta ?? new \stdClass;
         $this->data   = $responseObject->data;
     }
 

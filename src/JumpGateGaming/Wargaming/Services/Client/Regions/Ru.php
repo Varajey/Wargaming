@@ -9,4 +9,6 @@ class Ru extends Base
     const WARSHIPS_URL = 'https://api.worldofwarships.ru/wows/';
 
     const WARPLANES_URL = 'https://api.worldofwarplanes.ru/wowp/';
+
+    const WARGAMING_URL = 'https://api.worldoftanks.ru/wgn/';
 }

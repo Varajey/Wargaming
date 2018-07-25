@@ -17,19 +17,26 @@ abstract class Base
         switch ($type) {
             case 'tank':
             case 'tanks':
+            case 'wot':
                 $constant = 'TANK_URL';
                 break;
             case 'ship':
             case 'ships':
             case 'warship':
             case 'warships':
+            case 'wows':
                 $constant = 'WARSHIPS_URL';
                 break;
             case 'plane':
             case 'planes':
             case 'warplane':
             case 'warplanes':
+            case 'wowp':
                 $constant = 'WARPLANES_URL';
+                break;
+            case 'wgn':
+            case 'wargaming':
+                $constant = 'WARGAMING_URL';
                 break;
         }
 

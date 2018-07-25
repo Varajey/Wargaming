@@ -9,4 +9,6 @@ class Eu extends Base
     const WARSHIPS_URL = 'https://api.worldofwarships.eu/wows/';
 
     const WARPLANES_URL = 'https://api.worldofwarplanes.eu/wowp/';
+
+    const WARGAMING_URL = 'https://api.worldoftanks.eu/wgn/';
 }

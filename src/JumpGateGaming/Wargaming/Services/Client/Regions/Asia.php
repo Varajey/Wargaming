@@ -9,4 +9,6 @@ class Asia extends Base
     const WARSHIPS_URL = 'https://api.worldofwarships.asia/wows/';
 
     const WARPLANES_URL = false;
+
+    const WARGAMING_URL = 'https://api.worldoftanks.asia/wgn/';
 }

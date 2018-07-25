@@ -1,0 +1,13 @@
+{
+    "route": "servers/info/",
+    "verb": "get",
+    "model": "\\JumpGateGaming\\Wargaming\\Collections\\Wargaming\\Servers\\Info",
+    "model_type": "collection",
+    "required_arguments": [],
+    "optional_arguments": [
+        "fields",
+        "game",
+        "language"
+    ],
+    "extras": []
+}
