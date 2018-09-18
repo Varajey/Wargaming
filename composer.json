@@ -10,7 +10,7 @@
     "require": {
         "guzzlehttp/guzzle": "~6.0",
         "jenssegers/model": "~1.1",
-        "jumpgate/database": "dev-master",
+        "jumpgate/database": "~1.0",
         "socialiteproviders/manager": "~2.0 || ~3.0"
     },
     "autoload": {
