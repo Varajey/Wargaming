@@ -11,7 +11,7 @@ return [
     | Options: en, ru, pl, de, fr, es, zh-cn, zh-tw, tr, cs, th, vi, ko
     |
     */
-    'language' => 'en',
+    'language' => 'ru',
     /*
     |--------------------------------------------------------------------------
     | API Region
@@ -23,5 +23,5 @@ return [
     | Options: asia, eu, na, ru
     |
     */
-    'region' => 'na',
+    'region' => 'ru',
 ];
