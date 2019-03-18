@@ -21,7 +21,7 @@ class Provider extends AbstractProvider implements ProviderInterface
      */
     protected function getAuthUrl($state)
     {
-        return $this->buildAuthUrlFromBase('https://api.worldoftanks.com/ru/auth/login/', $state);
+        return $this->buildAuthUrlFromBase('https://api.worldoftanks.ru/wot/auth/login/', $state);
     }
 
     /**
